@@ -1,7 +1,7 @@
 # Build and Release Folders
 target/
 src/main/webapp/META-INF/
-
+src/main/java/com/project/weixin/base
 
 # Other files and folders
 .settings/
