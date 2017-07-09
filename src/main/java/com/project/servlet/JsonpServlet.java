@@ -1,0 +1,42 @@
+package com.project.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class JsonpServlet extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		  System.out.println("=========================================");
+		  request.setCharacterEncoding("UTF-8");
+		  response.setCharacterEncoding("UTF-8");
+		  response.setContentType("application/javascript");
+		  PrintWriter out = response.getWriter();
+		  String buffer = "callback({\"name\":\"Jack\"})";
+		  
+		  out.write(buffer);
+		  out.flush();
+		  out.close();
+	}
+
+	@Override
+	protected void service(HttpServletRequest arg0, HttpServletResponse arg1)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.service(arg0, arg1);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPost(req, resp);
+	}
+
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE generatorConfiguration
+   PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+ <generatorConfiguration>
+     <classPathEntry  location="E:\Maven\ali-repository\mysql\mysql-connector-java\5.0.8\mysql-connector-java-5.0.8.jar"/>
+     <context id="DB2Tables"  targetRuntime="MyBatis3">
+         <commentGenerator>
+             <property name="suppressDate" value="true"/>
+             <property name="suppressAllComments" value="true"/>
+         </commentGenerator>
+       
+         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/weixin?characterEncoding=utf8" userId="root" password="ap0910223">
+         </jdbcConnection>
+         <javaTypeResolver>
+             <property name="forceBigDecimals" value="false"/>
+         </javaTypeResolver>
+         <javaModelGenerator targetPackage="com.project.weixin.model" targetProject="myProject/src/main/java">
+             <property name="enableSubPackages" value="true"/>
+             <property name="trimStrings" value="true"/>
+         </javaModelGenerator>
+         <sqlMapGenerator targetPackage="resource.config.mapping" targetProject="myProject/src/main/resources">
+             <property name="enableSubPackages" value="true"/>
+         </sqlMapGenerator>
+         <javaClientGenerator type="XMLMAPPER" targetPackage="com.project.weixin.dao" targetProject="myProject/src/main/java">
+             <property name="enableSubPackages" value="true"/>
+         </javaClientGenerator>
+         <table tableName="wx_authorize" 
+         	domainObjectName="WxAuthorize"
+         	enableCountByExample="false"
+         	enableUpdateByExample="false"
+         	enableDeleteByExample="false"
+         	enableSelectByExample="false"
+         	selectByExampleQueryId="false"
+         	enableSelectByPrimaryKey="false"> 
+         </table>
+         <table tableName="wx_users" 
+         	domainObjectName="WxUsers"
+         	enableCountByExample="false"
+         	enableUpdateByExample="false"
+         	enableDeleteByExample="false"
+         	enableSelectByExample="false"
+         	selectByExampleQueryId="false"
+         	enableSelectByPrimaryKey="false" > 
+         </table>
+          <table tableName="wx_access_token" 
+         	domainObjectName="WxAccessToken"
+         	enableCountByExample="false"
+         	enableUpdateByExample="false"
+         	enableDeleteByExample="false"
+         	enableSelectByExample="false"
+         	selectByExampleQueryId="false"
+         	enableSelectByPrimaryKey="false" > 
+         </table>
+         
+       </context>
+ </generatorConfiguration>

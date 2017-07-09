@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="exceptionResolver"
+		class=" com.project.core.exception.CustomMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="com.project.core.exception.SystemException">error/500</prop>
+				<prop key="com.project.core.exception.BusinessException">error/errorpage</prop>
+				<prop key="java.lang.exception">error/500</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/test"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
+        <property name="dataSource" ref="dataSource"></property>  
+        <property name="configLocation" value="classpath:resource/config/mybatis-config.xml" />   
+    </bean> 
+	 <!--jdbcTemplate和数据库关联-->
+     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+         <property name = "dataSource" ref="dataSource"/>
+     </bean>
+</beans>

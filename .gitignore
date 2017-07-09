@@ -1,5 +1,6 @@
 # Build and Release Folders
 target/
+src/main/webapp/META-INF/
 
 # Other files and folders
 .settings/
