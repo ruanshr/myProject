@@ -6,6 +6,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.project.weixin.model.WxAccessToken" >
+  	
     insert into wx_access_token (id, access_token, expires_in, 
       created, updated)
     values (#{id,jdbcType=INTEGER}, #{accessToken,jdbcType=VARCHAR}, #{expiresIn,jdbcType=INTEGER}, 

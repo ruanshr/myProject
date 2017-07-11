@@ -16,7 +16,7 @@
 	</bean>
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/test"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/weixin"></property>
 		<property name="user" value="root"></property>
 		<property name="password" value="123456"></property>
 	</bean>
@@ -24,8 +24,8 @@
         <property name="dataSource" ref="dataSource"></property>  
         <property name="configLocation" value="classpath:resource/config/mybatis-config.xml" />   
     </bean> 
-	 <!--jdbcTemplate和数据库关联-->
-     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-         <property name = "dataSource" ref="dataSource"/>
-     </bean>
+     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+          <property name="basePackage" value="com.project.weixin.dao"></property>
+          <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+      </bean>
 </beans>
