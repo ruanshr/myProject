@@ -13,8 +13,7 @@
 
     <!--  配置注解的支持    -->
     <mvc:annotation-driven></mvc:annotation-driven>
-    <mvc:resources mapping="/js/**" location="/js/"></mvc:resources>  
-    <mvc:resources mapping="/images/**" location="/images/"></mvc:resources>  
+    <mvc:resources mapping="/assets/**" location="/assets/"></mvc:resources>    
     <!--  启用自动扫描   -->
    <context:component-scan base-package="com.project.weixin.controllers"></context:component-scan>
     

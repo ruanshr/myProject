@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>欢迎你</title>
-<script type="text/javascript" src="/weixin/js/libs/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/weixin/assets/js/libs/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 var ajaxRequest = function(){
 	var rtn =$.ajax({

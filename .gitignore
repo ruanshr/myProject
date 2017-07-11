@@ -1,17 +1,2 @@
-# Build and Release Folders
-target/
-src/main/webapp/META-INF/
-src/main/java/com/project/weixin/base
 
-# Other files and folders
-.settings/
-.classpath
-.project
-.mymetadata
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
- 
+/target/
