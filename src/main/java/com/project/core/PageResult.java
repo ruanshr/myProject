@@ -2,10 +2,9 @@ package com.project.core;
 
 import java.io.Serializable;
 import java.util.List;
-
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import com.project.core.utils.StringUtil;
+import com.project.utils.StringUtil;
+ 
 
 public class PageResult<T> implements  Serializable {
 	public static final int NUMBERS_PER_PAGE = 10;
