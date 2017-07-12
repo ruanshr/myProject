@@ -3,5 +3,6 @@ target/
 src/test/
 .classpath
 .project
+src/main/webapp/META-INF
 src/main/webapp/WEB-INF/classes/
 src/main/webapp/WEB-INF/classes/com/project/weixin/base/
