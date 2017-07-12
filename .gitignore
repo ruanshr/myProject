@@ -1,2 +1,6 @@
-
-/target/
+.settings/
+target/
+src/test/
+.classpath
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/classes/com/project/weixin/base/
